@@ -5,9 +5,10 @@ export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://fosti-ums.pages.dev";
-  const currentDate = new Date().toISOString();
+  // Clean W3C Date format (YYYY-MM-DD) preferred by Google Search Console
+  const currentDate = new Date().toISOString().split("T")[0];
 
-  // Dynamic Blog routes
+  // Dynamic Blog routes (All confirmed 200 OK)
   const blogRoutes: MetadataRoute.Sitemap = blogsData.map((post) => ({
     url: `${baseUrl}/blogs/${post.slug}`,
     lastModified: currentDate,
@@ -15,10 +16,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  // Core Static routes
+  // Core Static routes (All confirmed 200 OK)
   const staticRoutes: MetadataRoute.Sitemap = [
     {
-      url: baseUrl,
+      url: `${baseUrl}/`,
       lastModified: currentDate,
       changeFrequency: "daily",
       priority: 1.0,
@@ -46,12 +47,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: currentDate,
       changeFrequency: "weekly",
       priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/fostifest`,
-      lastModified: currentDate,
-      changeFrequency: "weekly",
-      priority: 0.9,
     },
   ];
 
