@@ -52,6 +52,9 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  verification: {
+    google: "google964bcfb899e1dfd7",
+  },
   openGraph: {
     title: "FOSTI UMS — Leading The Future of Open Source",
     description: "Forum Open Source Teknik Informatika Universitas Muhammadiyah Surakarta. Wadah eksplorasi teknologi, riset software open-source, dan inovasi mahasiswa.",
