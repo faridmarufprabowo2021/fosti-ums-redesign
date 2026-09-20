@@ -4,7 +4,7 @@ import { blogsData } from "@/data/blogs";
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://fostiums.org";
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://fosti-ums.pages.dev";
   const currentDate = new Date().toISOString();
 
   // Dynamic Blog routes

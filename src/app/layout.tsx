@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://fostiums.org";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://fosti-ums.pages.dev";
 
 export const metadata: Metadata = {
   title: {
