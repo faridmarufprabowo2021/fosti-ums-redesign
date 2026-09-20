@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import { Code2, ArrowUpRight, Mail, MapPin } from "lucide-react";
+import Image from "next/image";
+import { ArrowUpRight, Mail, MapPin } from "lucide-react";
 import { FaGithub, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
 
 export function Footer() {
@@ -20,8 +21,14 @@ export function Footer() {
           {/* Col 1 & 2: Brand & About */}
           <div className="lg:col-span-2 space-y-4">
             <Link href="/" className="flex items-center gap-2.5">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl border-2 border-black bg-red-600 text-white shadow-[3px_3px_0px_0px_#000] dark:border-zinc-700">
-                <Code2 className="h-5 w-5" />
+              <div className="relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-zinc-950 shadow-[3px_3px_0px_0px_#000] dark:border-zinc-700">
+                <Image
+                  src="/logo.png"
+                  alt="Logo Resmi FOSTI UMS"
+                  width={40}
+                  height={40}
+                  className="h-full w-full object-cover"
+                />
               </div>
               <div className="flex flex-col">
                 <div className="flex items-center gap-1.5">

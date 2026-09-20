@@ -69,7 +69,13 @@ export const metadata: Metadata = {
     description: "Forum Open Source Teknik Informatika Universitas Muhammadiyah Surakarta.",
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { url: "/icon.png", sizes: "32x32", type: "image/png" },
+      { url: "/logo.png", sizes: "any", type: "image/png" },
+      { url: "/favicon.ico" },
+    ],
+    shortcut: "/logo.png",
+    apple: "/apple-icon.png",
   },
 };
 

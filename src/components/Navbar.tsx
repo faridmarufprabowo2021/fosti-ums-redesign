@@ -2,8 +2,9 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { ThemeToggle } from "./ThemeToggle";
-import { Menu, X, ArrowUpRight, Code2, Sparkles } from "lucide-react";
+import { Menu, X, ArrowUpRight, Sparkles } from "lucide-react";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -40,8 +41,15 @@ export function Navbar() {
           href="/"
           className="group flex items-center gap-2.5 focus-visible:outline-none"
         >
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl border-2 border-black bg-amber-300 text-black shadow-[2px_2px_0px_0px_#000] transition-transform group-hover:-translate-y-0.5 group-hover:shadow-[3px_3px_0px_0px_#000] dark:border-zinc-700 dark:bg-amber-400 dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,0.2)]">
-            <Code2 className="h-5 w-5 transition-transform group-hover:rotate-12" />
+          <div className="relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-zinc-950 shadow-[2px_2px_0px_0px_#000] transition-transform group-hover:-translate-y-0.5 group-hover:shadow-[3px_3px_0px_0px_#000] dark:border-zinc-700">
+            <Image
+              src="/logo.png"
+              alt="Logo Resmi FOSTI UMS"
+              width={40}
+              height={40}
+              className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
+              priority
+            />
           </div>
           <div className="flex flex-col">
             <div className="flex items-center gap-1.5">
