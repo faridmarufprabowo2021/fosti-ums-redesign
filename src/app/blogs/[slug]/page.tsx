@@ -6,6 +6,7 @@ import { Metadata } from "next";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { blogsData, getBlogBySlug } from "@/data/blogs";
+import { ArticleJsonLd } from "@/components/seo/JsonLd";
 import {
   Calendar,
   Clock,
@@ -82,6 +83,14 @@ export default async function BlogDetailPage({ params }: BlogPageProps) {
 
   return (
     <div className="flex min-h-screen flex-col bg-zinc-50 text-zinc-900 selection:bg-red-500 selection:text-white dark:bg-[#09090b] dark:text-zinc-100">
+      <ArticleJsonLd
+        title={blog.title}
+        description={blog.description}
+        datePublished={blog.datePublish}
+        image={blog.image}
+        slug={blog.slug}
+        author={blog.author}
+      />
       <Navbar />
 
       <main className="flex-1">

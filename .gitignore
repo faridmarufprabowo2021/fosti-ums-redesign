@@ -40,5 +40,9 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# temp files
+figma_file.json
+
+
 # cloudflare
 .wrangler/
